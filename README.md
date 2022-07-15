@@ -1,0 +1,1 @@
+<img src="https://github.com/betulantep/DergilikRecyclerViewDesign/blob/master/ScreenShots/dergilik_image1.png" width="300"><img src="https://github.com/betulantep/DergilikRecyclerViewDesign/blob/master/ScreenShots/dergilik_image2.png" width="300"><img src="https://github.com/betulantep/DergilikRecyclerViewDesign/blob/master/ScreenShots/dergilik_image3.png" width="300">
