@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="6dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white">
+
+        <ImageView
+            android:id="@+id/ivNews"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/the_summary_of_the_day" />
+
+
+        <TextView
+            android:id="@+id/tvHeader1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Bugün neler yaşandı?"
+            android:textColor="@color/navDefaultColor"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivNews" />
+
+        <TextView
+            android:id="@+id/tvHeader2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:text="Dergilik'le 2 dakikada günün özeti!"
+            android:textColor="@color/primaryDark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvHeader1"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeader1" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="04/07/2022"
+            android:textColor="@color/navDefaultColor"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeader2" />
+
+        <ImageView
+            android:id="@+id/ivReadIcon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintStart_toEndOf="@+id/tvDate"
+            app:layout_constraintTop_toTopOf="@+id/tvDate"
+            app:srcCompat="@drawable/ic_eye_24" />
+
+        <TextView
+            android:id="@+id/tvReadNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="3369"
+            android:textColor="@color/navDefaultColor"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintStart_toEndOf="@+id/ivReadIcon"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+        <ImageView
+            android:id="@+id/ivSoundIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHeader1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvHeader1"
+            app:srcCompat="@drawable/ic_baseline_volume_up_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

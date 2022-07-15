@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryGray"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUserIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/ic_account_circle_24"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/ivDergilik"
+        android:layout_width="55dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/dergilik_logo2" />
+
+    <ImageView
+        android:id="@+id/ivTurkcell"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@+id/ivUserIcon"
+        app:layout_constraintStart_toEndOf="@+id/ivDergilik"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/turkcell_yatay_disi_logo" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Güncel Makaleler"
+                android:textColor="@color/black_100"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivMainView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_main_view"
+                app:tint="@color/navDefaultColor" />
+
+            <ImageView
+                android:id="@+id/ivVerticalView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMainView"
+                app:layout_constraintEnd_toStartOf="@+id/ivMainView"
+                app:layout_constraintTop_toTopOf="@+id/ivMainView"
+                app:srcCompat="@drawable/ic_vertical_view"
+                app:tint="@color/navDefaultColor" />
+
+            <ImageView
+                android:id="@+id/ivHorizontalView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivVerticalView"
+                app:layout_constraintEnd_toStartOf="@+id/ivVerticalView"
+                app:layout_constraintTop_toTopOf="@+id/ivVerticalView"
+                app:srcCompat="@drawable/ic_horizontal_view"
+                app:tint="@color/navDefaultColor" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintRvNews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvCategories">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNews"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintRvNews"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintRvNews"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintRvNews"
+                    app:layout_constraintTop_toTopOf="@+id/constraintRvNews"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/white"
+            android:paddingVertical="5dp"
+            app:contentInsetStart="0dp"
+            app:fabCradleMargin="6dp"
+            app:fabCradleRoundedCornerRadius="0dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:itemIconTint="@drawable/bottom_nav_selector"
+                app:itemTextColor="@drawable/bottom_nav_selector"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/menu_bottom" />
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@color/white"
+            app:fabCustomSize="70dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/ic_article_24"
+            app:tint="@color/navDefaultColor"
+            android:contentDescription="Article" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

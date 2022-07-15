@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_dashboard_24"
+        android:title="Anasayfa"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_podcast_24"
+        android:title="Podcast"
+        app:showAsAction="always" />
+    <item
+        android:enabled="false"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_news_24"
+        android:title="Haber"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_archive_24"
+        android:title="Arşivim"
+        app:showAsAction="always" />
+</menu>
